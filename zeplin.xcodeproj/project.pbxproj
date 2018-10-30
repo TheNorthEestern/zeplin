@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AFCAB5DB218689B30033B642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB5DA218689B30033B642 /* AppDelegate.swift */; };
-		AFCAB5DD218689B30033B642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB5DC218689B30033B642 /* ViewController.swift */; };
+		AFCAB5DD218689B30033B642 /* VanillaNavigationControllerSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB5DC218689B30033B642 /* VanillaNavigationControllerSubclass.swift */; };
 		AFCAB5E0218689B30033B642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCAB5DE218689B30033B642 /* Main.storyboard */; };
 		AFCAB5E2218689B40033B642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFCAB5E1218689B40033B642 /* Assets.xcassets */; };
 		AFCAB5E5218689B40033B642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCAB5E3218689B40033B642 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,8 @@
 		AFCAB60421868EBF0033B642 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB60321868EBF0033B642 /* AchievementModel.swift */; };
 		AFCAB60621868F3A0033B642 /* OverviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB60521868F3A0033B642 /* OverviewModel.swift */; };
 		AFCAB608218695E80033B642 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = AFCAB607218695E80033B642 /* achievements.json */; };
+		AFCAB60B2187F2E40033B642 /* AchievementsViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB60A2187F2E40033B642 /* AchievementsViewInterface.swift */; };
+		AFCAB60D2187FAD10033B642 /* AchievementsViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB60C2187FAD10033B642 /* AchievementsViewTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,7 @@
 /* Begin PBXFileReference section */
 		AFCAB5D7218689B30033B642 /* zeplin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zeplin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCAB5DA218689B30033B642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFCAB5DC218689B30033B642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFCAB5DC218689B30033B642 /* VanillaNavigationControllerSubclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanillaNavigationControllerSubclass.swift; sourceTree = "<group>"; };
 		AFCAB5DF218689B30033B642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFCAB5E1218689B40033B642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFCAB5E4218689B40033B642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		AFCAB60321868EBF0033B642 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		AFCAB60521868F3A0033B642 /* OverviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModel.swift; sourceTree = "<group>"; };
 		AFCAB607218695E80033B642 /* achievements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = achievements.json; sourceTree = "<group>"; };
+		AFCAB60A2187F2E40033B642 /* AchievementsViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewInterface.swift; sourceTree = "<group>"; };
+		AFCAB60C2187FAD10033B642 /* AchievementsViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		AFCAB5D9218689B30033B642 /* zeplin */ = {
 			isa = PBXGroup;
 			children = (
+				AFCAB6092187F2970033B642 /* Protocols */,
 				AFCAB60021868AC00033B642 /* Resources */,
 				AFCAB5FF21868AA70033B642 /* Storyboards */,
 				AFCAB5FE21868A490033B642 /* Routing */,
@@ -93,7 +98,6 @@
 				AFCAB5FB218689F40033B642 /* View */,
 				AFCAB5FA218689E80033B642 /* Interactor */,
 				AFCAB5DA218689B30033B642 /* AppDelegate.swift */,
-				AFCAB5DC218689B30033B642 /* ViewController.swift */,
 				AFCAB5E6218689B40033B642 /* Info.plist */,
 			);
 			path = zeplin;
@@ -118,6 +122,8 @@
 		AFCAB5FB218689F40033B642 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AFCAB5DC218689B30033B642 /* VanillaNavigationControllerSubclass.swift */,
+				AFCAB60C2187FAD10033B642 /* AchievementsViewTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +168,14 @@
 				AFCAB607218695E80033B642 /* achievements.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AFCAB6092187F2970033B642 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AFCAB60A2187F2E40033B642 /* AchievementsViewInterface.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +282,9 @@
 			files = (
 				AFCAB60221868BBE0033B642 /* AchievementResultModel.swift in Sources */,
 				AFCAB60621868F3A0033B642 /* OverviewModel.swift in Sources */,
-				AFCAB5DD218689B30033B642 /* ViewController.swift in Sources */,
+				AFCAB60D2187FAD10033B642 /* AchievementsViewTableViewController.swift in Sources */,
+				AFCAB60B2187F2E40033B642 /* AchievementsViewInterface.swift in Sources */,
+				AFCAB5DD218689B30033B642 /* VanillaNavigationControllerSubclass.swift in Sources */,
 				AFCAB5DB218689B30033B642 /* AppDelegate.swift in Sources */,
 				AFCAB60421868EBF0033B642 /* AchievementModel.swift in Sources */,
 			);
