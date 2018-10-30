@@ -29,22 +29,23 @@ class AchievementsViewTableViewController: UITableViewController {
   // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {
-    return 0
+    return 1
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return 10
   }
   
-  /*
+  
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-   
-   // Configure the cell...
-   
-   return cell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "AchievementViewCell", for: indexPath)
+    return cell
    }
-   */
+  
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return super.tableView(tableView, heightForRowAt: indexPath)
+  }
+ 
   
   /*
    // Override to support conditional editing of the table view.
