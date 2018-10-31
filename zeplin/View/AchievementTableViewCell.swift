@@ -26,9 +26,7 @@ class AchievementTableViewCell: UITableViewCell {
     achievementShadowBackgroundView.layer.shadowOffset = CGSize(width: 2, height: 0)
     achievementShadowBackgroundView.layer.shadowRadius = 5
     achievementShadowBackgroundView.layer.shadowOpacity = 0.5
-   
-   achievementShadowBackgroundView.layer.shadowColor = UIColor.gray.cgColor
-    
+    achievementShadowBackgroundView.layer.shadowColor = UIColor.gray.cgColor
     achievementShadowBackgroundView.layer.cornerRadius = 10
     achievementShadowBackgroundView.layer.backgroundColor = UIColor.black.cgColor
   }

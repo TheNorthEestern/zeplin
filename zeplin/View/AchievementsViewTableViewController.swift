@@ -11,7 +11,7 @@ import UIKit
 class AchievementsViewTableViewController: UITableViewController {
   
   var presenter: AchievementsModuleInterface!
-  var achievements: [AchievementModel]!
+  var achievementResult: AchievementResultModel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,7 +27,7 @@ class AchievementsViewTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return achievements.count
+    return achievementResult.achievements.count
   }
   
   
@@ -35,7 +35,7 @@ class AchievementsViewTableViewController: UITableViewController {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "AchievementViewCell", for: indexPath) as? AchievementTableViewCell else {
       return super.tableView(tableView, cellForRowAt: indexPath)
     }
-    cell.configure(with: achievements[indexPath.row])
+    cell.configure(with: achievementResult.achievements[indexPath.row])
     return cell
    }
   
@@ -92,8 +92,9 @@ class AchievementsViewTableViewController: UITableViewController {
 }
 
 extension AchievementsViewTableViewController: AchievementsViewInterface {
-  func showAchievementData(achievements: [AchievementModel]) {
-    self.achievements = achievements
+  func showAchievementData(achievementResult: AchievementResultModel) {
+    self.achievementResult = achievementResult
+    self.title = self.achievementResult.overview.title
     self.tableView.reloadData()
   }
 }

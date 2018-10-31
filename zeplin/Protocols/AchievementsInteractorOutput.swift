@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AchievementsInteractorOutput: class {
-  func achievementsFetched(achievements: [AchievementModel])
+  func achievementsFetched(achievementResult: AchievementResultModel)
 }

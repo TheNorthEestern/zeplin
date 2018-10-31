@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AchievementsViewInterface: class {
-  func showAchievementData(achievements: [AchievementModel])
+  func showAchievementData(achievementResult: AchievementResultModel)
 }

@@ -16,7 +16,7 @@ class AchievementsInteractor: AchievementsInteractorInput {
       if let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path), options: Data.ReadingOptions.mappedIfSafe) {
         do {
           let achievementResult = try JSONDecoder().decode(AchievementResultModel.self, from: jsonData)
-          self.output.achievementsFetched(achievements: achievementResult.achievements)
+          self.output.achievementsFetched(achievementResult: achievementResult)
         } catch let error {
           print("There was an error: \(error.localizedDescription)")
         }

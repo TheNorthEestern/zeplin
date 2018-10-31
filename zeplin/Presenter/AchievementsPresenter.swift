@@ -22,9 +22,9 @@ class AchievementsPresenter: AchievementsModuleInterface, AchievementsInteractor
     self.router.presentDetailsInterfaceForAchievement(achievement: achievement)
   }
   
-  func achievementsFetched(achievements: [AchievementModel]) {
-    if !achievements.isEmpty {
-      self.view.showAchievementData(achievements: achievements)
+  func achievementsFetched(achievementResult: AchievementResultModel) {
+    if !achievementResult.achievements.isEmpty {
+      self.view.showAchievementData(achievementResult: achievementResult)
     }
   }
 }
