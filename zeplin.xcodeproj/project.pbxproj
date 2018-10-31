@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF82254521892F4200F5B9EA /* AchievementsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82254421892F4200F5B9EA /* AchievementsModuleInterface.swift */; };
+		AF8225472189302F00F5B9EA /* AchievementsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8225462189302F00F5B9EA /* AchievementsInteractorOutput.swift */; };
+		AF822549218930DC00F5B9EA /* AchievementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF822548218930DC00F5B9EA /* AchievementsPresenter.swift */; };
+		AF82254B218934D400F5B9EA /* AchievementsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82254A218934D400F5B9EA /* AchievementsInteractorInput.swift */; };
+		AF82254D2189360900F5B9EA /* AchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82254C2189360900F5B9EA /* AchievementsInteractor.swift */; };
+		AF82254F2189383400F5B9EA /* AchievementsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF82254E2189383400F5B9EA /* AchievementsRouter.swift */; };
+		AF8225512189387500F5B9EA /* AchievementsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8225502189387500F5B9EA /* AchievementsRouterInput.swift */; };
+		AF8225532189418700F5B9EA /* AchievementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8225522189418700F5B9EA /* AchievementTableViewCell.swift */; };
 		AFCAB5DB218689B30033B642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB5DA218689B30033B642 /* AppDelegate.swift */; };
 		AFCAB5DD218689B30033B642 /* VanillaNavigationControllerSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAB5DC218689B30033B642 /* VanillaNavigationControllerSubclass.swift */; };
 		AFCAB5E0218689B30033B642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCAB5DE218689B30033B642 /* Main.storyboard */; };
@@ -32,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF82254421892F4200F5B9EA /* AchievementsModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsModuleInterface.swift; sourceTree = "<group>"; };
+		AF8225462189302F00F5B9EA /* AchievementsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractorOutput.swift; sourceTree = "<group>"; };
+		AF822548218930DC00F5B9EA /* AchievementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsPresenter.swift; sourceTree = "<group>"; };
+		AF82254A218934D400F5B9EA /* AchievementsInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractorInput.swift; sourceTree = "<group>"; };
+		AF82254C2189360900F5B9EA /* AchievementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractor.swift; sourceTree = "<group>"; };
+		AF82254E2189383400F5B9EA /* AchievementsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsRouter.swift; sourceTree = "<group>"; };
+		AF8225502189387500F5B9EA /* AchievementsRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsRouterInput.swift; sourceTree = "<group>"; };
+		AF8225522189418700F5B9EA /* AchievementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementTableViewCell.swift; sourceTree = "<group>"; };
 		AFCAB5D7218689B30033B642 /* zeplin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zeplin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCAB5DA218689B30033B642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFCAB5DC218689B30033B642 /* VanillaNavigationControllerSubclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanillaNavigationControllerSubclass.swift; sourceTree = "<group>"; };
@@ -115,6 +131,7 @@
 		AFCAB5FA218689E80033B642 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				AF82254C2189360900F5B9EA /* AchievementsInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -124,6 +141,7 @@
 			children = (
 				AFCAB5DC218689B30033B642 /* VanillaNavigationControllerSubclass.swift */,
 				AFCAB60C2187FAD10033B642 /* AchievementsViewTableViewController.swift */,
+				AF8225522189418700F5B9EA /* AchievementTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +149,7 @@
 		AFCAB5FC21868A2B0033B642 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				AF822548218930DC00F5B9EA /* AchievementsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -148,6 +167,7 @@
 		AFCAB5FE21868A490033B642 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				AF82254E2189383400F5B9EA /* AchievementsRouter.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -174,6 +194,10 @@
 			isa = PBXGroup;
 			children = (
 				AFCAB60A2187F2E40033B642 /* AchievementsViewInterface.swift */,
+				AF82254421892F4200F5B9EA /* AchievementsModuleInterface.swift */,
+				AF8225462189302F00F5B9EA /* AchievementsInteractorOutput.swift */,
+				AF82254A218934D400F5B9EA /* AchievementsInteractorInput.swift */,
+				AF8225502189387500F5B9EA /* AchievementsRouterInput.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -281,12 +305,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFCAB60221868BBE0033B642 /* AchievementResultModel.swift in Sources */,
+				AF8225532189418700F5B9EA /* AchievementTableViewCell.swift in Sources */,
+				AF82254B218934D400F5B9EA /* AchievementsInteractorInput.swift in Sources */,
 				AFCAB60621868F3A0033B642 /* OverviewModel.swift in Sources */,
+				AF8225472189302F00F5B9EA /* AchievementsInteractorOutput.swift in Sources */,
 				AFCAB60D2187FAD10033B642 /* AchievementsViewTableViewController.swift in Sources */,
 				AFCAB60B2187F2E40033B642 /* AchievementsViewInterface.swift in Sources */,
 				AFCAB5DD218689B30033B642 /* VanillaNavigationControllerSubclass.swift in Sources */,
+				AF82254521892F4200F5B9EA /* AchievementsModuleInterface.swift in Sources */,
 				AFCAB5DB218689B30033B642 /* AppDelegate.swift in Sources */,
+				AF82254D2189360900F5B9EA /* AchievementsInteractor.swift in Sources */,
+				AF82254F2189383400F5B9EA /* AchievementsRouter.swift in Sources */,
+				AF822549218930DC00F5B9EA /* AchievementsPresenter.swift in Sources */,
 				AFCAB60421868EBF0033B642 /* AchievementModel.swift in Sources */,
+				AF8225512189387500F5B9EA /* AchievementsRouterInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

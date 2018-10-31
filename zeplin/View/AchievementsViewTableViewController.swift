@@ -10,20 +10,14 @@ import UIKit
 
 class AchievementsViewTableViewController: UITableViewController {
   
+  var presenter: AchievementsModuleInterface!
+  var achievements: [AchievementModel]!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    if let path = Bundle.main.path(forResource: "achievements", ofType: "json") {
-      if let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path), options: Data.ReadingOptions.mappedIfSafe) {
-        do {
-          let item: AchievementResultModel = try JSONDecoder().decode(AchievementResultModel.self, from: jsonData)
-          print(String(describing: item))
-        } catch let error {
-          print("There was an error: \(error.localizedDescription)")
-        }
-      }
-    }
-    
+    presenter = AchievementsPresenter()
+    (presenter as! AchievementsPresenter).view = self
+    presenter.updateView()
   }
   
   // MARK: - Table view data source
@@ -33,12 +27,15 @@ class AchievementsViewTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return achievements.count
   }
   
   
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "AchievementViewCell", for: indexPath)
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "AchievementViewCell", for: indexPath) as? AchievementTableViewCell else {
+      return super.tableView(tableView, cellForRowAt: indexPath)
+    }
+    cell.configure(with: achievements[indexPath.row])
     return cell
    }
   
@@ -96,6 +93,7 @@ class AchievementsViewTableViewController: UITableViewController {
 
 extension AchievementsViewTableViewController: AchievementsViewInterface {
   func showAchievementData(achievements: [AchievementModel]) {
-    // implement this
+    self.achievements = achievements
+    self.tableView.reloadData()
   }
 }
