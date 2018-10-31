@@ -1,2 +1,3 @@
 # Zeplin 
-## Deets coming soon
+
+Open `zeplin.xcodeproj`, `Build` and `Run`
